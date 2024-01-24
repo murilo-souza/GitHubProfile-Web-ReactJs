@@ -1,11 +1,19 @@
 import styled from 'styled-components'
 
-export const Container = styled.div`
+export const Container = styled.a`
+  text-decoration: none;
+
   padding: 1rem;
 
   background: linear-gradient(90deg, #111729, #1d1b48);
 
   border-radius: 10px;
+
+  border: 1px solid transparent;
+
+  &:hover {
+    border: 1px solid ${(props) => props.theme.colors.blue300};
+  }
 `
 
 export const RepoTitle = styled.h3`

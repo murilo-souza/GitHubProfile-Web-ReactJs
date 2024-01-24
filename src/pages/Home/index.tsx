@@ -22,6 +22,7 @@ interface UserInfoProps {
   location: string
   followers: number
   following: number
+  html_url: string
 }
 
 export interface RepositoriesProps {
@@ -41,9 +42,12 @@ export function Home() {
   const [username, setUsername] = useState('murilo-souza')
   const [userInfo, setUserInfo] = useState<UserInfoProps>({} as UserInfoProps)
   const [repositories, setRepositories] = useState<RepositoriesProps[]>([])
+  const [viewAll, setViewAll] = useState(false)
 
   async function handleSearchRepositories() {
-    const response = await api.get(`/${username}/repos`)
+    const response = await api.get(
+      `/${username}/repos${viewAll ? '' : '?per_page=4'}`,
+    )
     setRepositories(response.data)
   }
 
@@ -55,7 +59,7 @@ export function Home() {
   useEffect(() => {
     handleSearchUserInfo()
     handleSearchRepositories()
-  }, [username])
+  }, [username, viewAll])
 
   return (
     <Aligner>
@@ -83,7 +87,9 @@ export function Home() {
           ))}
         </RepoContainer>
       </Container>
-      <FooterText>View all repositories</FooterText>
+      <FooterText onClick={() => setViewAll(!viewAll)}>
+        View all repositories
+      </FooterText>
     </Aligner>
   )
 }

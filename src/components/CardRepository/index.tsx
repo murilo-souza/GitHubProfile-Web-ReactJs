@@ -17,7 +17,7 @@ interface CardRepositoryProps {
 
 export function CardRepository({ data }: CardRepositoryProps) {
   return (
-    <Container>
+    <Container href={data.html_url}>
       <RepoTitle>{data.name}</RepoTitle>
       <RepoDescription>
         {data.description ? data.description : 'No description'}

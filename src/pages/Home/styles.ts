@@ -76,6 +76,11 @@ export const FooterText = styled.a`
   font-weight: 400;
 
   text-align: center;
+
+  &:hover {
+    cursor: pointer;
+    color: ${(props) => props.theme.colors.gray100};
+  }
 `
 
 export const Aligner = styled.main`
