@@ -59,6 +59,7 @@ export function Home() {
   useEffect(() => {
     handleSearchUserInfo()
     handleSearchRepositories()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [username, viewAll])
 
   return (
