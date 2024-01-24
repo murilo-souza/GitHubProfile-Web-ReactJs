@@ -60,8 +60,8 @@ export const ImageContainer = styled.div`
 
 export const ImageBackground = styled.img`
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  /* height: 100%;
+  object-fit: cover; */
 `
 
 export const PageTitle = styled.h1`
