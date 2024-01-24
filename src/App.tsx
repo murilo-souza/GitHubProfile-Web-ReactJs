@@ -1,6 +1,3 @@
 export function App() {
-  return (
-    <h1>Hellwdwddwo</h1>
-  )
+  return <h1>Hellwdwddwo</h1>
 }
-
