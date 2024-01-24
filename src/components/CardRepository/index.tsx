@@ -41,7 +41,7 @@ export function CardRepository({ data }: CardRepositoryProps) {
           <span>{data.stargazers_count}</span>
         </FooterContent>
         <FooterContent>
-          <p>{dateRelativeToNow}</p>
+          <p>updated {dateRelativeToNow}</p>
         </FooterContent>
       </Footer>
     </Container>
