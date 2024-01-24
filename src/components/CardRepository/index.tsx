@@ -10,12 +10,15 @@ import ForkIcon from '../../assets/Nesting.svg'
 import LicenseIcon from '../../assets/Chield_alt.svg'
 import StarIcon from '../../assets/Star.svg'
 import { RepositoriesProps } from '../../pages/Home'
+import { formatDateToTimePast } from '../../utils/formatDateToTimepast'
 
 interface CardRepositoryProps {
   data: RepositoriesProps
 }
 
 export function CardRepository({ data }: CardRepositoryProps) {
+  const dateRelativeToNow = formatDateToTimePast(data.updated_at)
+
   return (
     <Container href={data.html_url}>
       <RepoTitle>{data.name}</RepoTitle>
@@ -38,7 +41,7 @@ export function CardRepository({ data }: CardRepositoryProps) {
           <span>{data.stargazers_count}</span>
         </FooterContent>
         <FooterContent>
-          <p>updated 4 days ago</p>
+          <p>{dateRelativeToNow}</p>
         </FooterContent>
       </Footer>
     </Container>
