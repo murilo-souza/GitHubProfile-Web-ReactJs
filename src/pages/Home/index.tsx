@@ -5,6 +5,7 @@ import {
   FooterText,
   Header,
   ImageBackground,
+  ImageContainer,
   ImageProfile,
   InfoContainer,
   PageDescription,
@@ -70,9 +71,9 @@ export function Home() {
         value={username}
         onChange={(e) => setUsername(e.target.value)}
       />
-      {/* <ImageContainer> */}
-      <ImageBackground src={BgImage} />
-      {/* </ImageContainer> */}
+      <ImageContainer>
+        <ImageBackground src={BgImage} />
+      </ImageContainer>
       <Container>
         <Header>
           <ImageProfile src={userInfo.avatar_url} />
