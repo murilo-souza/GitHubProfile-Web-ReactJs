@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const Container = styled.main`
   max-width: 74rem;
 
-  margin: -4rem auto;
+  margin: -4rem auto 2rem auto;
 `
 
 export const Header = styled.header`
@@ -45,7 +45,7 @@ export const PageTitle = styled.h1`
   font-weight: 400;
 
   margin-top: 2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 `
 
 export const PageDescription = styled.h4`
@@ -53,4 +53,37 @@ export const PageDescription = styled.h4`
 
   font-size: 1.25rem;
   font-weight: 400;
+
+  margin-bottom: 2rem;
+`
+
+export const RepoContainer = styled.section`
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  grid-gap: 2rem;
+
+  margin-bottom: 2rem;
+`
+
+export const FooterText = styled.a`
+  text-decoration: none;
+
+  color: ${(props) => props.theme.colors.gray300};
+
+  font-size: 1rem;
+  font-weight: 400;
+
+  text-align: center;
+`
+
+export const Aligner = styled.main`
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  margin-bottom: 2rem;
 `
