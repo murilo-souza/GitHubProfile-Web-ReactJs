@@ -9,5 +9,7 @@ export const defaultTheme = {
     purple800: '#111729',
 
     blue300: '#3662E3',
+
+    black: '#000000',
   },
 }

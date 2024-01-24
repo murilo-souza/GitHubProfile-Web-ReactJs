@@ -5,7 +5,7 @@ export function CardInfo() {
     <Container>
       <p>Followers</p>
       <Divider />
-      <span>27899</span>
+      <span>2e1heu1ueu1u</span>
     </Container>
   )
 }
