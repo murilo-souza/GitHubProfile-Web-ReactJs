@@ -13,10 +13,12 @@ import {
 } from './styles'
 import BgImage from '../../assets/hero-image-github-profile.png'
 import { CardRepository } from '../../components/CardRepository'
+import { Input } from '../../components/Input'
 
 export function Home() {
   return (
     <Aligner>
+      <Input />
       <ImageBackground src={BgImage} />
       <Container>
         <Header>
