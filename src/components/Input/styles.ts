@@ -29,6 +29,10 @@ export const Container = styled.div`
     margin-left: 1rem;
 
     color: ${(props) => props.theme.colors.gray100};
+
+    @media (max-width: 768px) {
+      width: 20rem;
+    }
   }
 
   :focus {

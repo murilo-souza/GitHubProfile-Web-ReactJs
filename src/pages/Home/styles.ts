@@ -4,6 +4,10 @@ export const Container = styled.main`
   max-width: 74rem;
 
   margin: -4rem auto 2rem auto;
+
+  @media (max-width: 768px) {
+    margin: 0rem 1rem 2rem 1rem;
+  }
 `
 
 export const Header = styled.header`
@@ -12,6 +16,10 @@ export const Header = styled.header`
   align-items: flex-end;
 
   gap: 2.5rem;
+
+  @media (max-width: 768px) {
+    align-items: flex-start;
+  }
 `
 
 export const InfoContainer = styled.section`
@@ -21,6 +29,11 @@ export const InfoContainer = styled.section`
   gap: 2rem;
 
   margin-bottom: 1.5rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    margin-top: 1rem;
+  }
 `
 
 export const ImageProfile = styled.img`
@@ -32,10 +45,21 @@ export const ImageProfile = styled.img`
   border: 10px solid ${(props) => props.theme.colors.gray600};
 
   background-color: ${(props) => props.theme.colors.black};
+
+  @media (max-width: 768px) {
+    margin-top: -4rem;
+  }
+`
+export const ImageContainer = styled.div`
+  width: 100%;
+  height: 40vh;
+  overflow: hidden;
 `
 
 export const ImageBackground = styled.img`
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 `
 
 export const PageTitle = styled.h1`
@@ -46,6 +70,10 @@ export const PageTitle = styled.h1`
 
   margin-top: 2rem;
   margin-bottom: 0.5rem;
+
+  @media (max-width: 768px) {
+    margin-top: 0.5rem;
+  }
 `
 
 export const PageDescription = styled.h4`
@@ -65,6 +93,10 @@ export const RepoContainer = styled.section`
   grid-gap: 2rem;
 
   margin-bottom: 2rem;
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 `
 
 export const FooterText = styled.a`
