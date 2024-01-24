@@ -33,6 +33,8 @@ export const InfoContainer = styled.section`
   @media (max-width: 768px) {
     flex-direction: column;
     margin-top: 1rem;
+
+    align-items: flex-start;
   }
 `
 
