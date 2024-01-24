@@ -1,11 +1,16 @@
 import { Container, Divider } from './styles'
 
-export function CardInfo() {
+interface CardInfoProps {
+  title: string
+  value: string | number
+}
+
+export function CardInfo({ title, value }: CardInfoProps) {
   return (
     <Container>
-      <p>Followers</p>
+      <p>{title}</p>
       <Divider />
-      <span>2e1heu1ueu1u</span>
+      <span>{value}</span>
     </Container>
   )
 }
